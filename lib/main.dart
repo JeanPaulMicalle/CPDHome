@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'screens/car_parts_home.dart';
+import 'services/notification_service.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await NotificationService.initialize();
   runApp(const MyApp());
 }
 
